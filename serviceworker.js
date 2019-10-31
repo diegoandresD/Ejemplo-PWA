@@ -6,7 +6,8 @@ const CACHE_NAME = 'v1_cache_prueba_q',
         './BIDATAF 128x128.png',
         './BIDATAF 144x144.png',
         './BIDATAF 152x152.png',
-        './BIDATAF 192x192.png'
+        './BIDATAF 192x192.png',
+        './favicon.ico'
         
     ];
 console.log(urlsToCache);
