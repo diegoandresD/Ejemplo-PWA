@@ -1,7 +1,12 @@
 //asignar un nombre y versión al cache
 const CACHE_NAME = 'v1_cache_prueba_q',
     urlsToCache = [
-        '/'
+        '/',
+        '/index.html',
+        '/BIDATAF 128x128.png',
+        '/BIDATAF 144x144.png',
+        '/BIDATAF 152x152.png',
+        '/BIDATAF 192x192.png'
         
     ];
 console.log(urlsToCache);
