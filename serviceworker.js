@@ -2,7 +2,8 @@
 const CACHE_NAME = 'v1_cache_prueba_q',
     urlsToCache = [
         './',
-        './index.html'
+        './index.html',
+        './favicon.ico'
         
     ];
 console.log(urlsToCache);
