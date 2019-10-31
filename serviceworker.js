@@ -2,7 +2,6 @@
 const CACHE_NAME = 'v1_cache_prueba_q',
     urlsToCache = [
         '/',
-        '/BIDATAF 152x152.png',
         '/index.html'
         
     ];
