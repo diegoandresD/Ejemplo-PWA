@@ -1,8 +1,9 @@
-﻿//asignar un nombre y versión al cache
+//asignar un nombre y versión al cache
 const CACHE_NAME = 'v1_cache_prueba_q',
     urlsToCache = [
         './',
-        'BIDATAF 152x152.png'
+        './BIDATAF 152x152.png',
+        './index.html'
         
     ];
 console.log(urlsToCache);
@@ -15,12 +16,12 @@ self.addEventListener('install', e => {
                     .then(() => self.skipWaiting())
             })
             .catch(err => console.log('Falló registro de cache', err))
-    )
-})
+    );
+});
 
 //una vez que se instala el SW, se activa y busca los recursos para hacer que funcione sin conexión
 self.addEventListener('activate', e => {
-    const cacheWhitelist = [CACHE_NAME]
+    const cacheWhitelist = [CACHE_NAME];
 
     e.waitUntil(
         caches.keys()
@@ -32,12 +33,12 @@ self.addEventListener('activate', e => {
                             return caches.delete(cacheName)
                         }
                     })
-                )
+                );
             })
             // Le indica al SW activar el cache actual
             .then(() => self.clients.claim())
-    )
-})
+    );
+});
 
 //cuando el navegador recupera una url
 self.addEventListener('fetch', e => {
@@ -47,11 +48,11 @@ self.addEventListener('fetch', e => {
             .then(res => {
                 if (res) {
                     //recuperar del cache
-                    return res
+                    return res;
                 }
                 //recuperar de la petición a la url
-                return fetch(e.request)
+                return fetch(e.request);
             })
-    )
-})
+    );
+});
 
