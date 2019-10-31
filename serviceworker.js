@@ -1,7 +1,7 @@
 //asignar un nombre y versión al cache
 const CACHE_NAME = 'v1_cache_prueba_q',
     urlsToCache = [
-        '/index.html'
+        'index.html'
         
     ];
 console.log(urlsToCache);
